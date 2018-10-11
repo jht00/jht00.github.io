@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>validering av input-felt</title>
+</head>
+<body>
+
+<h1> validering av input-felt ved å bruke if-settning</h1>
+
+<p>skriv inn ditt navn</p>
+
+<div>
+    <span>Navn:</span>
+    <input type="text" id="inpnavn">
+
+</div>
+
+<div>
+    <div id="divresultat">
+
+    </div>
+</div>
+
+<script>
+    var inpnavn = document.getElementById("inpnavn"); //oppretter vi en variabel som refererer til inpnavn element
+    var divresultat =document.getElementById("divresultat"); // reffererer til vi til div resultat element
+
+    //oppretter vi en funksjon som kjører hver gang en tast trykkes i input feltet
+    inpnavn.onkeyup = function () {
+        var navn = inpnavn.value;
+
+       //oppretter vi en if settning som sjekker om lengden på inpnavn sin verdi er kortere enn 4 tegn
+        if (inpnavn.value.length < 4){
+            divresultat.innerHTML = "navnet er for kort";
+        }
+        else if (inpnavn.value.length > 15){
+            div.resultat.innerHTML = "hei navnet ditt er for langt(maks 15 tegn)";
+        }
+        else{
+            divresultat.innerHTML = "bra navnet er langt nok";
+        }
+
+    }
+
+
+    // switch settning
+  var verdi = prompt("skriv inn en tekst");
+    var verdi = "jada";
+    switch(verdi){
+        case "hei":
+            document.write("hei");
+            break;
+        case "jada":
+        case "JADA":
+            document.write("Jada");
+            break;
+    }
+</script>
+</body>
+</html>

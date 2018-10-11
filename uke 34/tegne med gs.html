@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tegning med javascript</title>
+    <style>
+        canvas{
+            border: solid; // lager ramme rundt rerret
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="canvas" width="600" height="600">
+    beklager nettleseren din støtter ikke canvas-elementer.
+</canvas>
+
+<script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+    // fylte rektangler
+   // ctx.fillRect(x,y, bredde,høyde);
+    ctx.fillRect(100,100,200,300); // lager rektangel
+
+   ctx.fillStyle = "orange";
+    ctx.fillRect(50,350,150,200);
+    ctx.fillRect(400,350,50,50);
+
+    // lager rektangel uten fyll med blå farge på linjene
+    ctx.strokeStyle = "blue";
+    ctx.strokeRect(500,50,75,75);
+
+    //tegne linjer
+    ctx.moveTo(50,25);
+    ctx.lineTo(75,500);
+    ctx.lineTo(525,500);
+    ctx.lineTo(500,50);
+    ctx.lineTo(50,25);
+    ctx.stroke(); // lager streker mellom punktene
+    //ctx.fill(); // fyller firkanten mellom punktene
+
+
+
+</script>
+
+</body>
+</html>
